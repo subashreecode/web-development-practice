@@ -1,0 +1,96 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+.portfolio-pic
+{
+    width:70px;
+    height:auto;
+    border-radius:10px;/*makes corner soft*/
+}
+.funfact-table,
+.funfact-table th,
+.funfact-table td
+{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 8px;
+}
+.portfolio-container
+{
+    background-color: #b9d3ed;
+    width:1000px;
+}
+.about-section
+{
+    display: flex;
+    align-items:flex-start;
+    gap:20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+.about-text
+{
+    width:700px;
+}
+body{
+    margin:20px;
+    font-family: Arial, sans-serif;
+}
+h2
+{
+    color:black;
+}
+ul
+{
+    margin-left:20px;
+    line-height: 1.6;
+    list-style-type: none;
+}
+.icon{
+    width:20px;
+}
+.header-section
+{
+    background-color: #003366;
+    color:white;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.header-section h1,
+
+.header-section h2
+{
+    margin:5px 0;
+    color: white;
+    text-align: center;
+    
+   
+}
+.navbar 
+{
+    display:flex;
+    justify-content: center;
+    gap:20px;
+    margin-top: 10px;;
+
+}
+.navbar h3
+{
+    margin:0;
+    font-weight: normal;
+    cursor:pointer;
+}
+.footer-container ul
+{
+    background-color: #003366;
+    display:flex;
+    gap:20px;
+    margin-top: 10px;
+   
+}
+footer a:hover {
+    color: #000;
+    text-decoration: underline;
+}
