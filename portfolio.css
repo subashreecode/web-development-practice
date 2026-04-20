@@ -65,8 +65,6 @@ ul
     margin:5px 0;
     color: white;
     text-align: center;
-    
-   
 }
 .navbar 
 {
@@ -88,7 +86,6 @@ ul
     display:flex;
     gap:20px;
     margin-top: 10px;
-   
 }
 footer a:hover {
     color: #000;
