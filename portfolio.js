@@ -6,10 +6,10 @@ document.body.style.background="red";
 //String methods allows to manipulate and work with text
 let userName="Subashree";
 let phoneNumber = "123-456-7890";
-//console.log(userName.length);
-//console.log(userName.indexOf("u"));
-//console.log(userName.charAt(0));
-//console.log(userName.lastIndexOf("o"));
+console.log(userName.length);
+console.log(userName.indexOf("u"));
+console.log(userName.charAt(0));
+console.log(userName.lastIndexOf("o"));
 userName = userName.trim();
 userName = userName.toUpperCase();
 userName = userName.toLowerCase();
@@ -183,7 +183,7 @@ sum(displayPage,89,90);
 //for each() method used to iterate over the elements
 //of an array and apply a specified function callback
 // to each element callback(element, index, array)
-
+//forEach automatically passes (element, index, array),
 const nums =[1,2,3,4,5];
 nums.forEach(double);
 nums.forEach(display);
@@ -196,6 +196,156 @@ function double (element,index,array)
 function display(element){
     console.log(element);
 }
+
+
+//map - it accepts the callback and applies that function to each element of an array, then return new array
+
+const num = [1,2,3,4,5];
+const squares = numbers.map(square);
+
+console.log(squares);
+
+function square(element)
+{
+    return Math.pow(element,2);
+}
+
+const students = ["Spongebob", "Patrick", "Squidward", "Sandy"];
+const studentsUpper = students.map(upperCase);
+
+function upperCase(element)
+{
+    return element.toUpperCase();
+}
+console.log(studentsUpper);
+
+//filter - creating a new array by filtering out elements
+let nos = [1,2,3,4,5,6,7];
+let evenNumbers = numbers.filter(isEven);
+
+console.log(evenNumbers);
+
+function isEven(element)
+{
+    return element %2==0;
+}
+
+//reduce - reduces the elements of a array to single value
+//reduce() automatically passes accumulator, current element,index, array
+
+const prices =[5,30,10,25,15,20];
+
+const total = prices.reduce(sum);
+console.log(`${total.toFixed(2)}`);
+
+function sum(accumulator, element)
+{
+    return accumulator+element;
+}
+
+//function expression - a way to define function as values or variables
+//1.callbacks in asynchronous operations
+//2.high order function
+//3.clousres
+//4.event listeners
+const fnos= [1,2,3,4,5];
+
+const cube = fnos.map(
+function cube(element)
+{
+    return Math.pow(element,3);
+});
+
+console.log(cube);
+
+
+const seasonFruits = [{name:"apple",color:"red",calories:95},
+    {name:"orange",color:"orange",calories:45},
+    {name:"banana",color:"yellow",calories: 105},
+    {name:"coconut",color:"white", calories: 159},
+    {name:"pineapple",color:"yellow",calories:200}
+]
+
+//access properties of fruit object
+console.log(seasonFruits[0].calories);
+
+//Add new fruit
+seasonFruits.push({name:"grapes",color:"purple",calories:62});
+console.table(seasonFruits);
+
+
+//Remove last fruit object
+seasonFruits.pop();
+console.table(seasonFruits);
+
+//Remove fruit object by indices
+seasonFruits.splice(1,2);
+console.table(seasonFruits);
+
+seasonFruits.forEach(fruit=>console.table(fruit));
+seasonFruits.forEach(fruit=>console.log(fruit.color));
+seasonFruits.filter(byColor);
+
+function byColor(fruit)
+{
+    console.log(fruit.name,fruit.color);
+}
+
+seasonFruits.map(byColor);
+
+
+const yellowFruits= seasonFruits.filter(fruit=>fruit.color==="yellow");
+const lowCalFruits = seasonFruits.filter(fruit=>fruit.calories<100);
+const highCalFruits=seasonFruits.filter(fruit=>fruit.calories>=100);
+
+//need to revisit
+//const maxFruit = seasonFruits.reduce((max,seasonFruits)=>seasonFruits.calories>max.calories?fruit:max);
+
+
+const fruitsArray = [{name: "banana",color: "yellow"},{name: "apple", color: "red"},{name: "grapes", color:"purple"}];
+
+
+//Access properties of fruit object
+console.table(fruitsArray[0]);
+console.table(fruitsArray[0].color);
+
+
+//Adding new fruit object
+console.table(fruitsArray.push({name: "kiwi",color: "green"}));
+
+//Remove last fruit object
+console.table(fruitsArray.pop);
+
+fruitsArray.forEach(fruits=>console.table(fruits));
+
+//sort() method used to sort elements of an array in place.
+//sorts elements as strings in lexicographic order , not alphabetical
+//lexicographic =(alphabet+numbers+symbol) as strings
+const sortNumbers = [1,10,2,9,3,8,4,7,5,6];
+sortNumbers.sort((a,b)=>b-a);//forward//desc
+
+sortNumbers.sort((a,b)=>a-b);//reverse//asc
+console.log(sortNumbers);
+
+const people = [{name:"Spongebob",age:30,gpa:3.0},{name:"patrick",age:29,gpa:2.5},{name:"Sandy",age:45,gpa:6.7}];
+people.sort((a,b)=>a.age-b.age);
+console.log(people);
+
+people.sort((a, b) => a.name.localeCompare(b.name)); //FORWARD//desc
+people.sort((a, b) => b.name.localeCompare(a.name)); //REVERSE//asc
+
+console.log(people);
+
+
+
+
+
+
+
+
+
+
+
 
 
 
